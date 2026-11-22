@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "kD8qNPySN/M=",
+  "success": true,
+  "projectFilePath": "C:\\Chubb AI Assignment\\ChatGPT_Method\\LifeInsurer\\LifeInsurer.Api\\LifeInsurer.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Antaragrafik\\.nuget\\packages\\confluent.kafka\\2.16.0\\confluent.kafka.2.16.0.nupkg.sha512",
+    "C:\\Users\\Antaragrafik\\.nuget\\packages\\librdkafka.redist\\2.16.0\\librdkafka.redist.2.16.0.nupkg.sha512",
+    "C:\\Users\\Antaragrafik\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.5\\microsoft.aspnetcore.openapi.10.0.5.nupkg.sha512",
+    "C:\\Users\\Antaragrafik\\.nuget\\packages\\microsoft.extensions.apidescription.server\\10.0.0\\microsoft.extensions.apidescription.server.10.0.0.nupkg.sha512",
+    "C:\\Users\\Antaragrafik\\.nuget\\packages\\microsoft.openapi\\3.11.0\\microsoft.openapi.3.11.0.nupkg.sha512",
+    "C:\\Users\\Antaragrafik\\.nuget\\packages\\swashbuckle.aspnetcore\\11.0.1\\swashbuckle.aspnetcore.11.0.1.nupkg.sha512",
+    "C:\\Users\\Antaragrafik\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\11.0.1\\swashbuckle.aspnetcore.swagger.11.0.1.nupkg.sha512",
+    "C:\\Users\\Antaragrafik\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\11.0.1\\swashbuckle.aspnetcore.swaggergen.11.0.1.nupkg.sha512",
+    "C:\\Users\\Antaragrafik\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\11.0.1\\swashbuckle.aspnetcore.swaggerui.11.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
