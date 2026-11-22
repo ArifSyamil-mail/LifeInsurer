@@ -1,0 +1,135 @@
+<div class="app-container">
+  <header class="header">
+    <h1>LifeInsurer</h1>
+    <span>Claims Management Portal</span>
+  </header>
+
+  <main class="main-content">
+    <h2>Welcome to LifeInsurer</h2>
+    <p>Manage and track insurance claims in one place.</p>
+
+    @if (successMessage) {
+      <p class="success-message">{{ successMessage }}</p>
+    }
+
+    @if (errorMessage) {
+      <p class="error-message">{{ errorMessage }}</p>
+    }
+
+    <section class="dashboard">
+      <div class="card">
+        <h3>Submit a Claim</h3>
+        <p>Register a new insurance claim.</p>
+        <button (click)="showSubmissionForm = true">
+          New Claim
+        </button>
+      </div>
+
+      <div class="card">
+        <h3>View Claims</h3>
+        <p>Review and track submitted claims.</p>
+        <button (click)="loadClaims()">
+          View Claims
+        </button>
+      </div>
+    </section>
+
+    @if (showSubmissionForm) {
+      <section class="form-section">
+        <h2>Submit New Claim</h2>
+
+        <form (ngSubmit)="submitClaim()">
+
+          <label>Policy Number</label>
+          <input
+            type="text"
+            name="policyNumber"
+            [(ngModel)]="claimData.policyNumber"
+            required
+            placeholder="e.g. POL-2026-001">
+
+          <label>Market</label>
+          <select
+            name="marketCode"
+            [(ngModel)]="claimData.marketCode">
+            <option value="MY">Malaysia</option>
+            <option value="SG">Singapore</option>
+            <option value="TH">Thailand</option>
+          </select>
+
+          <label>Claim Type</label>
+          <select
+            name="claimType"
+            [(ngModel)]="claimData.claimType">
+            <option value="Motor">Motor</option>
+            <option value="Property">Property</option>
+          </select>
+
+          <label>Incident Description</label>
+          <textarea
+            name="incidentDescription"
+            [(ngModel)]="claimData.incidentDescription"
+            required
+            rows="4"
+            placeholder="Describe what happened...">
+          </textarea>
+
+          <label>Incident Date</label>
+          <input
+            type="datetime-local"
+            name="incidentDate"
+            [(ngModel)]="claimData.incidentDate"
+            required>
+
+          <label>Estimated Liability (RM)</label>
+          <input
+            type="number"
+            name="estimatedLiability"
+            [(ngModel)]="claimData.estimatedLiability"
+            min="0"
+            required>
+
+          <div class="form-actions">
+            <button
+              type="button"
+              (click)="showSubmissionForm = false">
+              Cancel
+            </button>
+
+            <button type="submit">
+              Submit Claim
+            </button>
+          </div>
+
+        </form>
+      </section>
+    }
+    @if (showClaims) {
+  <section class="form-section">
+    <h2>Submitted Claims</h2>
+
+    @if (claims.length === 0) {
+      <p>No claims have been submitted yet.</p>
+    } @else {
+      <div class="claims-list">
+        @for (claim of claims; track claim.id) {
+          <div class="card claim-card">
+            <h3>{{ claim.claimNumber }}</h3>
+
+            <p><strong>Policy:</strong> {{ claim.policyNumber }}</p>
+            <p><strong>Market:</strong> {{ claim.marketCode }}</p>
+            <p><strong>Type:</strong> {{ claim.claimType }}</p>
+            <p><strong>Description:</strong> {{ claim.incidentDescription }}</p>
+            <p><strong>Estimated Liability:</strong> RM {{ claim.estimatedLiability }}</p>
+            <p><strong>Status:</strong>
+              {{ claim.status === 0 ? 'Submitted' : claim.status }}
+            </p>
+            <p><strong>Submitted:</strong> {{ claim.submittedAt | date:'medium' }}</p>
+          </div>
+        }
+      </div>
+    }
+  </section>
+}
+  </main>
+</div>
