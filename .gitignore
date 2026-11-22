@@ -22,3 +22,8 @@
 ## OS-generated files
 .DS_Store
 Thumbs.db
+
+## Database tracking, to prevent database corruption issue when making changes to source code
+*.db
+*.db-shm
+*.db-wal
