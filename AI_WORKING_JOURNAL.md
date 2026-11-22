@@ -54,3 +54,14 @@ We'll then connect those endpoints to the Angular interface so you can actually 
 **Decision:** Accepted.
 
 **Developer Reasoning:** This is the minimum requirement from our previous data model discussion. But due to time constraint, I only do 3 API to show the workflow of the claims management system.
+
+
+## Session 4 – Frontend Anguler
+
+**Task:** Design the frontend form using Angular.
+
+**AI suggestion:** Using Angular to create Submit New Claim form and  View Claim form.
+
+**Decision:** Accepted.
+
+**Developer Reasoning:** To show how the frondend works. Easier to visualise.
