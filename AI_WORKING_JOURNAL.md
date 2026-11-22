@@ -24,7 +24,7 @@
 
 **Developer reflection:** Architecture decisions should be justified against the assignment's scope rather than selecting technologies simply because they are available.
 
-## Session 1 – Database Model
+## Session 2 – Database Model
 
 **Task:** Design the data model for claims management system.
 
@@ -36,3 +36,21 @@ My next step will be to design the Entity Relationship Diagram (ERD), including 
 Secondly, I also want to see what happens if it fails. Just pick 1 scenario which is when claimant forget to put additional documents, so that at least I can see what pathways can be taken from (1) successful or (2) fail.
 
 **Developer Reasoning:** I would like to add the separation of duties for Claim Officer and Approver Officer, because I want to isolate each process, creating a template that I can scale for other insurance products of different premiums. I can also identify in terms of workflow, which side causes unsucessful application from either claimant's side or the claim officer's side.
+
+## Session 3 – Backend API
+
+**Task:** Design the API for the backend side claims management system and test using Swagger.
+
+**AI suggestion:** My recommended next step is to create the Claim API endpoints:
+1. POST /api/claims — Submit a claim.
+2. POST /api/claims/{id}/documents — Upload documents.
+3. GET /api/claims/{id} — View claim details and history for ONE (1) users or claim details.
+4. POST /api/claims/{id}/request-information — Request missing documents.
+5. POST /api/claims/{id}/assessments — Submit Officer assessment.
+6. POST /api/claims/{id}/reviews — Approve, reject or return.
+7. GET /api/claims/{id} — View claim details and history for ALL users
+We'll then connect those endpoints to the Angular interface so you can actually see the workflow..
+
+**Decision:** Accepted.
+
+**Developer Reasoning:** This is the minimum requirement from our previous data model discussion. But due to time constraint, I only do 3 API to show the workflow of the claims management system.
