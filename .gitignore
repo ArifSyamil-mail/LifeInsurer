@@ -1,0 +1,24 @@
+
+## .NET build outputs
+[Bb]in/
+[Oo]bj/
+
+## Visual Studio
+.vs/
+*.user
+*.suo
+
+## Visual Studio Code
+.vscode/
+
+## Logs
+*.log
+
+## Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+## OS-generated files
+.DS_Store
+Thumbs.db
